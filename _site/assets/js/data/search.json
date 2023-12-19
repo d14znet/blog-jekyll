@@ -1,0 +1,72 @@
+[
+  
+  {
+    "title": "Installing Jekyll",
+    "url": "/blog-jekyll/posts/installing-jekyll/",
+    "categories": "chirpy-starter, jekyll, update",
+    "tags": "",
+    "date": "2023-12-18 13:41:43 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "JEKYLL  Github          Create public repo on Github and initialize it with a main branch      Create GitHub Page        Local Repository          Create folder for local repository and clone the c...",
+    "content": "JEKYLL  Github          Create public repo on Github and initialize it with a main branch      Create GitHub Page        Local Repository          Create folder for local repository and clone the contents from the remote repo.        Install Jekyll and dependencies          Jekyll is a Gem Package, that’s why we need to install Gem (package manager) and then Jekyll (similar to pip/conda)      Also, it is recommendable to use an installation directory for the working user (root is not recommended).            sudo apt install ruby-full build-essential zlib1g-dev software-properties-common      echo '# Install Ruby Gems to ~/gems' &gt;&gt; ~/.bashrc      echo 'export GEM_HOME=\"$HOME/gems\"' &gt;&gt; ~/.bashrc      echo 'export PATH=\"$HOME/gems/bin:$PATH\"' &gt;&gt; ~/.bashrc      source ~/.bashrc      gem install jekyll bundler        If any problems with make crash the installation, you can also install Jekyll directly over apt with      sudo apt install jekyll        Initialize Jekyll site          On local repo:            jekyll new . #(create new Jekyll site on current directory)      jekyll new . #--force (if error prompt because folder is not empty)        New files will be generated, next command can be found on Gemfiles files      bundle exec jekyll serve        A URL for preview will be generated - if working via SSH, you can tunnel to it:      ssh -p &lt;Port-No.&gt; -L 4000:localhost:4000 user@&lt;ip-of-jekyll-host&gt; -i /path/to/pubkey.pub        To do changes on the fly, restart bundle with this option (you might not see live changes through SSH-tunnel):      bundle exec jekyll serve --livereload        Tweak config for GitHub Pages          Stop bundle (Ctrl + C), open Gemfiles file      Comment gem \"jekyll\", uncomment gem \"github-pages\"      Update gem github-pages: bundle update github-pages      If not installed, bundle install then bundle update      WHAT I DID INSTEAD:  gem install github-pages, then bundle install then bundle update  Many dependency failures were displayed, so I installed what was missing - some errors persisted though      gem install eventmachine      gem install http_parser.rb      gem update      apt install ruby-http      gem update      bundle update      bundle install        Commit changes and push to remote repo -&gt; Initialize site      git add ./* #(adds all files on current directory, so make sure you're on the local repo)      git commit -m \"Initialize Jekyll site\"      git push        Back on GitHub, the site will take some time to render  Adjust configuration          Open _config.yml, save changes, commit and push            base_url: \"/repo-name\"      url: \"https://username.github.io\"        Refresh URL to see changes - using incognito mode is recommended as old site might be saved in cache!"
+  },
+  
+  {
+    "title": "Installing Jekyll",
+    "url": "/blog-jekyll/posts/installing-jekyll/",
+    "categories": "jekyll, update",
+    "tags": "",
+    "date": "2023-12-18 13:41:43 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "JEKYLL  Github          Create public repo on Github and initialize it with a main branch      Create GitHub Page        Local Repository          Create folder for local repository and clone the c...",
+    "content": "JEKYLL  Github          Create public repo on Github and initialize it with a main branch      Create GitHub Page        Local Repository          Create folder for local repository and clone the contents from the remote repo.        Install Jekyll and dependencies          Jekyll is a Gem Package, that’s why we need to install Gem (package manager) and then Jekyll (similar to pip/conda)      Also, it is recommendable to use an installation directory for the working user (root is not recommended).            sudo apt install ruby-full build-essential zlib1g-dev software-properties-common      echo '# Install Ruby Gems to ~/gems' &gt;&gt; ~/.bashrc      echo 'export GEM_HOME=\"$HOME/gems\"' &gt;&gt; ~/.bashrc      echo 'export PATH=\"$HOME/gems/bin:$PATH\"' &gt;&gt; ~/.bashrc      source ~/.bashrc      gem install jekyll bundler        If any problems with make crash the installation, you can also install Jekyll directly over apt with      sudo apt install jekyll        Initialize Jekyll site          On local repo:            jekyll new . #(create new Jekyll site on current directory)      jekyll new . #--force (if error prompt because folder is not empty)        New files will be generated, next command can be found on Gemfiles files      bundle exec jekyll serve        A URL for preview will be generated - if working via SSH, you can tunnel to it:      ssh -p &lt;Port-No.&gt; -L 4000:localhost:4000 user@&lt;ip-of-jekyll-host&gt; -i /path/to/pubkey.pub        To do changes on the fly, restart bundle with this option (you might not see live changes through SSH-tunnel):      bundle exec jekyll serve --livereload        Tweak config for GitHub Pages          Stop bundle (Ctrl + C), open Gemfiles file      Comment gem \"jekyll\", uncomment gem \"github-pages\"      Update gem github-pages: bundle update github-pages      If not installed, bundle install then bundle update      WHAT I DID INSTEAD:  gem install github-pages, then bundle install then bundle update  Many dependency failures were displayed, so I installed what was missing - some errors persisted though      gem install eventmachine      gem install http_parser.rb      gem update      apt install ruby-http      gem update      bundle update      bundle install        Commit changes and push to remote repo -&gt; Initialize site      git add ./* #(adds all files on current directory, so make sure you're on the local repo)      git commit -m \"Initialize Jekyll site\"      git push        Back on GitHub, the site will take some time to render  Adjust configuration          Open _config.yml, save changes, commit and push            base_url: \"/repo-name\"      url: \"https://username.github.io\"        Refresh URL to see changes - using incognito mode is recommended as old site might be saved in cache!"
+  },
+  
+  {
+    "title": "Welcome to Jekyll!",
+    "url": "/blog-jekyll/posts/welcome-to-jekyll/",
+    "categories": "chirpy-starter, jekyll, update",
+    "tags": "",
+    "date": "2023-12-18 11:43:43 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "CHANGEYou’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to ...",
+    "content": "CHANGEYou’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.WHAT ABOUT THIS ONEThis is another change made on the fly. Does Jekyll know markdown?Jekyll requires blog post files to be named according to the following format:YEAR-MONTH-DAY-title.MARKUPWhere YEAR is a four-digit number, MONTH and DAY are both two-digit numbers, and MARKUP is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.Jekyll also offers powerful support for code snippets:def print_hi(name)  puts \"Hi, #{name}\"endprint_hi('Tom')#=&gt; prints 'Hi, Tom' to STDOUT.Check out the Jekyll docs for more info on how to get the most out of Jekyll. File all bugs/feature requests at Jekyll’s GitHub repo. If you have questions, you can ask them on Jekyll Talk."
+  },
+  
+  {
+    "title": "Welcome to Jekyll!",
+    "url": "/blog-jekyll/posts/welcome-to-jekyll/",
+    "categories": "jekyll, update",
+    "tags": "",
+    "date": "2023-12-18 11:43:43 +0100",
+    
+
+
+
+
+
+    
+    "snippet": "CHANGEYou’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to ...",
+    "content": "CHANGEYou’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.WHAT ABOUT THIS ONEThis is another change made on the fly. Does Jekyll know markdown?Jekyll requires blog post files to be named according to the following format:YEAR-MONTH-DAY-title.MARKUPWhere YEAR is a four-digit number, MONTH and DAY are both two-digit numbers, and MARKUP is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.Jekyll also offers powerful support for code snippets:def print_hi(name)  puts \"Hi, #{name}\"endprint_hi('Tom')#=&gt; prints 'Hi, Tom' to STDOUT.Check out the Jekyll docs for more info on how to get the most out of Jekyll. File all bugs/feature requests at Jekyll’s GitHub repo. If you have questions, you can ask them on Jekyll Talk."
+  }
+  
+]
+
