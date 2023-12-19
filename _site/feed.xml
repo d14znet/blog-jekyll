@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/blog-jekyll/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog-jekyll/" rel="alternate" type="text/html" /><updated>2023-12-18T14:13:23+01:00</updated><id>http://localhost:4000/blog-jekyll/feed.xml</id><title type="html">Malili’s Jekyll Blog</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Installing Jekyll</title><link href="http://localhost:4000/blog-jekyll/jekyll/update/2023/12/18/installing-jekyll.html" rel="alternate" type="text/html" title="Installing Jekyll" /><published>2023-12-18T13:41:43+01:00</published><updated>2023-12-18T13:41:43+01:00</updated><id>http://localhost:4000/blog-jekyll/jekyll/update/2023/12/18/installing-jekyll</id><content type="html" xml:base="http://localhost:4000/blog-jekyll/jekyll/update/2023/12/18/installing-jekyll.html">&lt;h1 id=&quot;jekyll&quot;&gt;JEKYLL&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Github
+    &lt;ul&gt;
+      &lt;li&gt;Create public repo on Github and initialize it with a main branch&lt;/li&gt;
+      &lt;li&gt;Create GitHub Page&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Local Repository
+    &lt;ul&gt;
+      &lt;li&gt;Create folder for local repository and clone the contents from the remote repo.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Install Jekyll and dependencies
+    &lt;ul&gt;
+      &lt;li&gt;Jekyll is a Gem Package, that’s why we need to install Gem (package manager) and then Jekyll (similar to pip/conda)&lt;/li&gt;
+      &lt;li&gt;Also, it is recommendable to use an installation directory for the working user (root is not recommended).&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;      &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;ruby-full build-essential zlib1g-dev software-properties-common
+      &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;# Install Ruby Gems to ~/gems&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; ~/.bashrc
+      &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;export GEM_HOME=&quot;$HOME/gems&quot;&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; ~/.bashrc
+      &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;export PATH=&quot;$HOME/gems/bin:$PATH&quot;&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; ~/.bashrc
+      &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/.bashrc
+      gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;jekyll bundler
+      &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If any problems with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;make&lt;/code&gt; crash the installation, you can also install Jekyll directly over &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;apt&lt;/code&gt; with&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;      &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;jekyll
+      &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Initialize Jekyll site
+    &lt;ul&gt;
+      &lt;li&gt;On local repo:&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;      jekyll new &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#(create new Jekyll site on current directory)&lt;/span&gt;
+      jekyll new &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#--force (if error prompt because folder is not empty)&lt;/span&gt;
+      &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;New files will be generated, next command can be found on Gemfiles files&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;      bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve
+      &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A URL for preview will be generated - if working via SSH, you can tunnel to it:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;      ssh &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; &amp;lt;Port-No.&amp;gt; &lt;span class=&quot;nt&quot;&gt;-L&lt;/span&gt; 4000:localhost:4000 user@&amp;lt;ip-of-jekyll-host&amp;gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; /path/to/pubkey.pub
+      &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;To do changes on the fly, restart bundle with this option (you might not see live changes through SSH-tunnel):&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;      bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve &lt;span class=&quot;nt&quot;&gt;--livereload&lt;/span&gt;
+      &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Tweak config for GitHub Pages
+    &lt;ul&gt;
+      &lt;li&gt;Stop bundle (Ctrl + C), open Gemfiles file&lt;/li&gt;
+      &lt;li&gt;Comment &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gem &quot;jekyll&quot;&lt;/code&gt;, uncomment &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gem &quot;github-pages&quot;&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;Update gem github-pages: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle update github-pages&lt;/code&gt;&lt;/li&gt;
+      &lt;li&gt;If not installed, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle install&lt;/code&gt; then &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle update&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;WHAT I DID INSTEAD:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gem install github-pages&lt;/code&gt;, then &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle install&lt;/code&gt; then &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle update&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Many dependency failures were displayed, so I installed what was missing - &lt;strong&gt;some errors persisted though&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;      gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;eventmachine
+      gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;http_parser.rb
+      gem update
+      apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;ruby-http
+      gem update
+      bundle update
+      bundle &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
+      &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Commit changes and push to remote repo -&amp;gt; Initialize site&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;      git add ./&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#(adds all files on current directory, so make sure you&apos;re on the local repo)&lt;/span&gt;
+      git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Initialize Jekyll site&quot;&lt;/span&gt;
+      git push
+      &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Back on GitHub, the site will take some time to render&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Adjust configuration
+    &lt;ul&gt;
+      &lt;li&gt;Open _config.yml, save changes, commit and push&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;      base_url: &lt;span class=&quot;s2&quot;&gt;&quot;/repo-name&quot;&lt;/span&gt;
+      url: &lt;span class=&quot;s2&quot;&gt;&quot;https://username.github.io&quot;&lt;/span&gt;
+      &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Refresh URL to see changes - using incognito mode is recommended as &lt;strong&gt;old site might be saved in cache!&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">JEKYLL</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/blog-jekyll/jekyll/update/2023/12/18/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2023-12-18T11:43:43+01:00</published><updated>2023-12-18T11:43:43+01:00</updated><id>http://localhost:4000/blog-jekyll/jekyll/update/2023/12/18/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/blog-jekyll/jekyll/update/2023/12/18/welcome-to-jekyll.html">&lt;p&gt;CHANGE&lt;/p&gt;
+
+&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;WHAT ABOUT THIS ONE&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This is another change made on the fly. &lt;em&gt;Does Jekyll know markdown?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;Tom&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &apos;Hi, Tom&apos; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">CHANGE</summary></entry></feed>
