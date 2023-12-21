@@ -1,146 +1,139 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/blog-jekyll/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog-jekyll/" rel="alternate" type="text/html" /><updated>2023-12-18T14:13:23+01:00</updated><id>http://localhost:4000/blog-jekyll/feed.xml</id><title type="html">Malili’s Jekyll Blog</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Installing Jekyll</title><link href="http://localhost:4000/blog-jekyll/jekyll/update/2023/12/18/installing-jekyll.html" rel="alternate" type="text/html" title="Installing Jekyll" /><published>2023-12-18T13:41:43+01:00</published><updated>2023-12-18T13:41:43+01:00</updated><id>http://localhost:4000/blog-jekyll/jekyll/update/2023/12/18/installing-jekyll</id><content type="html" xml:base="http://localhost:4000/blog-jekyll/jekyll/update/2023/12/18/installing-jekyll.html">&lt;h1 id=&quot;jekyll&quot;&gt;JEKYLL&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/blog-jekyll/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog-jekyll/" rel="alternate" type="text/html" /><updated>2023-12-21T19:18:55+01:00</updated><id>http://localhost:4000/blog-jekyll/feed.xml</id><title type="html">Malili’s Jekyll Blog</title><subtitle>This is a test to see if I can set up a blog using the Jekyll framework. I want to use to gather my technical documentation about networking/infra theory and personal projects.</subtitle><entry><title type="html">Setting up a Jekyll Blog</title><link href="http://localhost:4000/blog-jekyll/post/2023/12/21/setting-up-a-jekyll-blog.html" rel="alternate" type="text/html" title="Setting up a Jekyll Blog" /><published>2023-12-21T19:14:00+01:00</published><updated>2023-12-21T19:14:00+01:00</updated><id>http://localhost:4000/blog-jekyll/post/2023/12/21/setting-up-a-jekyll-blog</id><content type="html" xml:base="http://localhost:4000/blog-jekyll/post/2023/12/21/setting-up-a-jekyll-blog.html">&lt;h1 id=&quot;setting-up-a-jekyll-blog-with-chirpy-theme&quot;&gt;SETTING UP A JEKYLL BLOG WITH CHIRPY THEME&lt;/h1&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;Github
+&lt;p&gt;For months I was looking for a way to collect and centralize all the technical documentation that I’ve been gathering during my vocational training on IT.
+Apart from that, I wanted to start doing projects on my own to gain more knowledge about topics that I’m interested in - networking, containers, server setup and automatization.
+As a way to document my progress in projects, gather instructions and technical docs, I decided to set up an easy blog.&lt;/p&gt;
+
+&lt;p&gt;After doing some research I became interested in Jekyll, which is a Ruby-based framework to serve blogs. It seemed pretty easy to setup and configure, giving me the possibility to self-host and serve my content to the Internet, or to combine it with GitHub Pages.&lt;/p&gt;
+
+&lt;p&gt;I will be using the later for now - GitHub Pages offers hosting and also automatized actions to build and serve Jekyll content. Self-hosting might be a nice project for later on.&lt;/p&gt;
+
+&lt;p&gt;Let’s see if this project lives up to my expectations and the blog serves as a collection point for my projects’ progress.&lt;/p&gt;
+
+&lt;h2 id=&quot;disclaimer--credits&quot;&gt;Disclaimer &amp;amp; Credits&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;This blog wouldn’t exist without the help provided by these tutorials:&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;Bill Raymond - &lt;a href=&quot;https://www.youtube.com/watch?v=EmSrQCDsMv4&quot;&gt;Up and Running with GitHub Pages, Part 3, Blogging with Jekyll&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;Jekyll’s Official Documentation - &lt;a href=&quot;https://jekyllrb.com/docs/installation/&quot;&gt;Installation Guide&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;Cotes Chung - &lt;a href=&quot;https://chirpy.cotes.page/posts/getting-started/&quot;&gt;Getting Started with Chirpy Theme&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;p&gt;This version of the blog &lt;strong&gt;doesn’t use the Chirpy Theme&lt;/strong&gt; but the pre-installed Minima.
+I used Chirpy on &lt;a href=&quot;https://d14znet.github.io/blog-chirpy/&quot;&gt;another repository&lt;/a&gt;, which is meant to be the final version of the blog (for now…).&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;instructions&quot;&gt;Instructions&lt;/h2&gt;
+
+&lt;h3 id=&quot;create-and-initialize-github-repo&quot;&gt;Create and initialize GitHub Repo&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Create &lt;strong&gt;public repo&lt;/strong&gt; on Github and initialize it with a main branch&lt;/li&gt;
+  &lt;li&gt;Create GitHub Page: Click on Settings and then Pages (on the left menu).
     &lt;ul&gt;
-      &lt;li&gt;Create public repo on Github and initialize it with a main branch&lt;/li&gt;
-      &lt;li&gt;Create GitHub Page&lt;/li&gt;
+      &lt;li&gt;Under &lt;strong&gt;Build and deployment&lt;/strong&gt;, choose GitHub Actions as Source.&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Local Repository
-    &lt;ul&gt;
-      &lt;li&gt;Create folder for local repository and clone the contents from the remote repo.&lt;/li&gt;
-    &lt;/ul&gt;
+  &lt;li&gt;On your working host, create a folder for a local repository and clone the contents from the remote repo.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;install-jekyll-and-its-dependencies&quot;&gt;Install Jekyll and its dependencies&lt;/h3&gt;
+&lt;p&gt;Jekyll is a &lt;strong&gt;Gem Package&lt;/strong&gt;, that’s why we need to install Gem (package manager) and then Jekyll (similar to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt;/&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;conda&lt;/code&gt; on Python).
+Following the instructions on &lt;a href=&quot;https://jekyllrb.com/docs/installation/other-linux/&quot;&gt;Jekyll’s Official Documentation&lt;/a&gt;, it is recommendable to use an installation directory for the working user (root is not recommended).&lt;/p&gt;
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;sudo apt install ruby-full build-essential zlib1g-dev software-properties-common
+&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;echo &apos;#&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;Install Ruby Gems to ~/gems&lt;span class=&quot;s1&quot;&gt;&apos; &amp;gt;&amp;gt; ~/.bashrc
+&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;echo &apos;export GEM_HOME=&quot;$&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;HOME/gems&quot;&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; ~/.bashrc
+&lt;span class=&quot;gp&quot;&gt;echo &apos;export PATH=&quot;$&lt;/span&gt;HOME/gems/bin:&lt;span class=&quot;nv&quot;&gt;$PATH&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&apos; &amp;gt;&amp;gt; ~/.bashrc
+&lt;/span&gt;&lt;span class=&quot;go&quot;&gt;source ~/.bashrc
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Afterwards you should &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;exit&lt;/code&gt; the session and login again so that the changes to the .bashrc take place. Run then &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gem install jekyll bundler&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;troubleshooting&quot;&gt;Troubleshooting&lt;/h4&gt;
+&lt;p&gt;I had some trouble at this point, since my system wasn’t able to install all dependencies and Jekyll couldn’t be installed that way. It turns out you can also install Jekyll via Package Manager: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo apt install jekyll&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;initialize-jekyll-site&quot;&gt;Initialize Jekyll site&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;On your local repo, run:
+    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;jekyll new . #&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;this creates a new Jekyll site on current directory&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;jekyll new . --force #&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if &lt;/span&gt;the directory is not empty, Jekyll will throw an error - use &lt;span class=&quot;k&quot;&gt;then &lt;/span&gt;the &lt;span class=&quot;nt&quot;&gt;--force&lt;/span&gt; option&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-  &lt;li&gt;Install Jekyll and dependencies
-    &lt;ul&gt;
-      &lt;li&gt;Jekyll is a Gem Package, that’s why we need to install Gem (package manager) and then Jekyll (similar to pip/conda)&lt;/li&gt;
-      &lt;li&gt;Also, it is recommendable to use an installation directory for the working user (root is not recommended).&lt;/li&gt;
-    &lt;/ul&gt;
+  &lt;li&gt;Jekyll will start generating files. To be able to browse your site, you have to serve it using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle exec jekyll serve&lt;/code&gt;. You can find this command under &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfiles&lt;/code&gt; textfile.&lt;/li&gt;
+  &lt;li&gt;Your command prompt will generate an URL for preview - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://127.0.0.1:4000/&lt;/code&gt;. If you’re working via SSH as I was, you can use a local tunnel to preview your content. Once the tunnel is established, open &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://localhost:4000/&lt;/code&gt; on your local browser.
+    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;ssh -p &amp;lt;Port-No.&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-L&lt;/span&gt; 4000:localhost:4000 user@&amp;lt;ip-of-jekyll-host&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;      &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;ruby-full build-essential zlib1g-dev software-properties-common
-      &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;# Install Ruby Gems to ~/gems&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; ~/.bashrc
-      &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;export GEM_HOME=&quot;$HOME/gems&quot;&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; ~/.bashrc
-      &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;export PATH=&quot;$HOME/gems/bin:$PATH&quot;&apos;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; ~/.bashrc
-      &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; ~/.bashrc
-      gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;jekyll bundler
-      &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;If any problems with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;make&lt;/code&gt; crash the installation, you can also install Jekyll directly over &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;apt&lt;/code&gt; with&lt;/li&gt;
+  &lt;li&gt;If you want to see your changes live (without having to reload the page every time), restart the bundle with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle exec jekyll serve --livereload&lt;/code&gt; - &lt;strong&gt;Note&lt;/strong&gt;: This doesn’t work if you set up a SSH tunnel. I guess it will work if you set up 2 tunnels, as Jekyll uses an extra port to serve live content.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;      &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;jekyll
-      &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;set-up-github-pages-config&quot;&gt;Set up GitHub Pages config&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Stop bundle (Ctrl + C), open &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfiles&lt;/code&gt; file&lt;/li&gt;
+  &lt;li&gt;Comment &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gem &quot;jekyll&quot;&lt;/code&gt;, uncomment &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gem &quot;github-pages&quot;&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Update gem github-pages: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle update github-pages&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;If needed, install bundle updates: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle install&lt;/code&gt; then &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle update&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;Initialize Jekyll site
-    &lt;ul&gt;
-      &lt;li&gt;On local repo:&lt;/li&gt;
-    &lt;/ul&gt;
+&lt;h4 id=&quot;troubleshooting-1&quot;&gt;Troubleshooting&lt;/h4&gt;
+&lt;p&gt;This is again a point where I stuck for a while, as my system wasn’t once again able to fullfill dependencies.
+I looked at the errors carefully and tried to manually install all gems that were missing.
+Some error messages persisted though, but I was able to tweak my Jekyll config to work with GitHub Actions.&lt;/p&gt;
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;gem install github-pages
+bundle install
+bundle update
+&lt;/span&gt;&lt;span class=&quot;gp&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;Install will fail listing which gems were missing - I tried to &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;them manually:
+&lt;span class=&quot;go&quot;&gt;gem install eventmachine
+gem install http_parser.rb
+gem update
+apt install ruby-http
+gem update
+bundle update
+bundle install
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;commit-changes-and-push-to-remote-repo&quot;&gt;Commit changes and push to remote repo&lt;/h3&gt;
+&lt;p&gt;Once you have commited and push changes, GitHub will need some time to render your site live.
+At this point, you will be able to see your blog at your GitHub Pages URL (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;username.github.io/repo-name&lt;/code&gt;).&lt;/p&gt;
+&lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;git add ./* #&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;adds all files on current directory, so make sure you&lt;span class=&quot;s1&quot;&gt;&apos;re on the local repo)
+&lt;/span&gt;&lt;span class=&quot;go&quot;&gt;git commit -m &quot;Initialize Jekyll site&quot;
+git push
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;adjust-jekyll-configuration&quot;&gt;Adjust Jekyll configuration&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Open &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; and adjust the following, then commit and push to remote repo:
+    &lt;div class=&quot;language-console highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;go&quot;&gt;base_url: &quot;/repo-name&quot;
+url: &quot;https://username.github.io&quot;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;      jekyll new &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#(create new Jekyll site on current directory)&lt;/span&gt;
-      jekyll new &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#--force (if error prompt because folder is not empty)&lt;/span&gt;
-      &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;New files will be generated, next command can be found on Gemfiles files&lt;/li&gt;
+  &lt;li&gt;Refresh URL on your browser to see changes - using incognito mode is recommended as &lt;strong&gt;old site might be saved in cache!&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;      bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve
-      &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
+&lt;h3 id=&quot;create--publish-first-post&quot;&gt;Create &amp;amp; publish first post&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;A URL for preview will be generated - if working via SSH, you can tunnel to it:&lt;/li&gt;
+  &lt;li&gt;You will find an example post under &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts/&lt;/code&gt; on your local repository. You can use it as template to start writing your first posts. Remember to rename the file as recommended on the &lt;em&gt;Welcome to Jekyll&lt;/em&gt; post - ``YYYY-MM-DD-your-post-name.markdown`&lt;/li&gt;
+  &lt;li&gt;Every time you run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle exec jekyll serve --livereload&lt;/code&gt;, Jekyll will render the markdown language to display HTML.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;      ssh &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; &amp;lt;Port-No.&amp;gt; &lt;span class=&quot;nt&quot;&gt;-L&lt;/span&gt; 4000:localhost:4000 user@&amp;lt;ip-of-jekyll-host&amp;gt; &lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt; /path/to/pubkey.pub
-      &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT&lt;/strong&gt;: As we tweaked Jekyll’s configuration to make it compatible with GitHub Pages, you might have problems when trying to preview the site on your local machine. If this happens, simply revert the steps from “Set up GitHub Pages config” and make sure to add the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfiles&lt;/code&gt; file to .gitignore.&lt;/p&gt;
+
+&lt;h2 id=&quot;adding-a-theme&quot;&gt;Adding a Theme&lt;/h2&gt;
+
+&lt;p&gt;With everything set up and running, only a nice theme was missing - I particularly liked the Chirpy Theme a lot for its compact design and cleanliness.
+To install it, I followed the instructions from Cotes Chung’s Site, &lt;a href=&quot;https://chirpy.cotes.page/posts/getting-started/&quot;&gt;Getting Started with Chirpy Theme&lt;/a&gt;.
+I went for the &lt;strong&gt;Chirpy Starter&lt;/strong&gt; method - even though I already had set up a repository for my blog, I created a new one and imported the config, Gemfile and posts from the prior repo. 
+I preferred keeping things separated, since I might probably break a lot of things while learning :) this way I might reckon faster what went wrong and will be able to restore things faster.&lt;/p&gt;
+
+&lt;p&gt;The result of Cotes Chung’s documentation is the blog you’re currently reading, so I didn’t break that many things in the end.&lt;/p&gt;
+
+&lt;h2 id=&quot;to-dos&quot;&gt;To-Dos&lt;/h2&gt;
+
+&lt;p&gt;At the time you’re reading this, all these features/changes need to be done yet:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;To do changes on the fly, restart bundle with this option (you might not see live changes through SSH-tunnel):&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;      bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;jekyll serve &lt;span class=&quot;nt&quot;&gt;--livereload&lt;/span&gt;
-      &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Tweak config for GitHub Pages
-    &lt;ul&gt;
-      &lt;li&gt;Stop bundle (Ctrl + C), open Gemfiles file&lt;/li&gt;
-      &lt;li&gt;Comment &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gem &quot;jekyll&quot;&lt;/code&gt;, uncomment &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gem &quot;github-pages&quot;&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;Update gem github-pages: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle update github-pages&lt;/code&gt;&lt;/li&gt;
-      &lt;li&gt;If not installed, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle install&lt;/code&gt; then &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle update&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;WHAT I DID INSTEAD:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gem install github-pages&lt;/code&gt;, then &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle install&lt;/code&gt; then &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle update&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Many dependency failures were displayed, so I installed what was missing - &lt;strong&gt;some errors persisted though&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;      gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;eventmachine
-      gem &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;http_parser.rb
-      gem update
-      apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;ruby-http
-      gem update
-      bundle update
-      bundle &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt;
-      &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Commit changes and push to remote repo -&amp;gt; Initialize site&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;      git add ./&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;#(adds all files on current directory, so make sure you&apos;re on the local repo)&lt;/span&gt;
-      git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Initialize Jekyll site&quot;&lt;/span&gt;
-      git push
-      &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Back on GitHub, the site will take some time to render&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Adjust configuration
-    &lt;ul&gt;
-      &lt;li&gt;Open _config.yml, save changes, commit and push&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;      base_url: &lt;span class=&quot;s2&quot;&gt;&quot;/repo-name&quot;&lt;/span&gt;
-      url: &lt;span class=&quot;s2&quot;&gt;&quot;https://username.github.io&quot;&lt;/span&gt;
-      &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Refresh URL to see changes - using incognito mode is recommended as &lt;strong&gt;old site might be saved in cache!&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">JEKYLL</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/blog-jekyll/jekyll/update/2023/12/18/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2023-12-18T11:43:43+01:00</published><updated>2023-12-18T11:43:43+01:00</updated><id>http://localhost:4000/blog-jekyll/jekyll/update/2023/12/18/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/blog-jekyll/jekyll/update/2023/12/18/welcome-to-jekyll.html">&lt;p&gt;CHANGE&lt;/p&gt;
-
-&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;WHAT ABOUT THIS ONE&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;This is another change made on the fly. &lt;em&gt;Does Jekyll know markdown?&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;Tom&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &apos;Hi, Tom&apos; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">CHANGE</summary></entry></feed>
+  &lt;li&gt;Set up the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;about&lt;/code&gt; site.&lt;/li&gt;
+  &lt;li&gt;Figure out how to upload content and use it on posts (images).&lt;/li&gt;
+  &lt;li&gt;I also have no clue how the tags actually work.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="post" /><summary type="html">SETTING UP A JEKYLL BLOG WITH CHIRPY THEME</summary></entry></feed>

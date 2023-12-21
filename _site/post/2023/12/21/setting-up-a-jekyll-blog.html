@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Setting up a Jekyll Blog | Malili’s Jekyll Blog</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Setting up a Jekyll Blog" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="SETTING UP A JEKYLL BLOG WITH CHIRPY THEME" />
+<meta property="og:description" content="SETTING UP A JEKYLL BLOG WITH CHIRPY THEME" />
+<link rel="canonical" href="http://localhost:4000/blog-jekyll/post/2023/12/21/setting-up-a-jekyll-blog.html" />
+<meta property="og:url" content="http://localhost:4000/blog-jekyll/post/2023/12/21/setting-up-a-jekyll-blog.html" />
+<meta property="og:site_name" content="Malili’s Jekyll Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-12-21T19:14:00+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Setting up a Jekyll Blog" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-12-21T19:14:00+01:00","datePublished":"2023-12-21T19:14:00+01:00","description":"SETTING UP A JEKYLL BLOG WITH CHIRPY THEME","headline":"Setting up a Jekyll Blog","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog-jekyll/post/2023/12/21/setting-up-a-jekyll-blog.html"},"url":"http://localhost:4000/blog-jekyll/post/2023/12/21/setting-up-a-jekyll-blog.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog-jekyll/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/blog-jekyll/feed.xml" title="Malili&apos;s Jekyll Blog" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog-jekyll/">Malili&#39;s Jekyll Blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog-jekyll/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Setting up a Jekyll Blog</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2023-12-21T19:14:00+01:00" itemprop="datePublished">Dec 21, 2023
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="setting-up-a-jekyll-blog-with-chirpy-theme">SETTING UP A JEKYLL BLOG WITH CHIRPY THEME</h1>
+
+<p>For months I was looking for a way to collect and centralize all the technical documentation that I’ve been gathering during my vocational training on IT.
+Apart from that, I wanted to start doing projects on my own to gain more knowledge about topics that I’m interested in - networking, containers, server setup and automatization.
+As a way to document my progress in projects, gather instructions and technical docs, I decided to set up an easy blog.</p>
+
+<p>After doing some research I became interested in Jekyll, which is a Ruby-based framework to serve blogs. It seemed pretty easy to setup and configure, giving me the possibility to self-host and serve my content to the Internet, or to combine it with GitHub Pages.</p>
+
+<p>I will be using the later for now - GitHub Pages offers hosting and also automatized actions to build and serve Jekyll content. Self-hosting might be a nice project for later on.</p>
+
+<p>Let’s see if this project lives up to my expectations and the blog serves as a collection point for my projects’ progress.</p>
+
+<h2 id="disclaimer--credits">Disclaimer &amp; Credits</h2>
+
+<blockquote>
+  <p>This blog wouldn’t exist without the help provided by these tutorials:</p>
+
+  <ul>
+    <li>Bill Raymond - <a href="https://www.youtube.com/watch?v=EmSrQCDsMv4">Up and Running with GitHub Pages, Part 3, Blogging with Jekyll</a></li>
+    <li>Jekyll’s Official Documentation - <a href="https://jekyllrb.com/docs/installation/">Installation Guide</a></li>
+    <li>Cotes Chung - <a href="https://chirpy.cotes.page/posts/getting-started/">Getting Started with Chirpy Theme</a></li>
+  </ul>
+
+  <p>This version of the blog <strong>doesn’t use the Chirpy Theme</strong> but the pre-installed Minima.
+I used Chirpy on <a href="https://d14znet.github.io/blog-chirpy/">another repository</a>, which is meant to be the final version of the blog (for now…).</p>
+</blockquote>
+
+<h2 id="instructions">Instructions</h2>
+
+<h3 id="create-and-initialize-github-repo">Create and initialize GitHub Repo</h3>
+<ul>
+  <li>Create <strong>public repo</strong> on Github and initialize it with a main branch</li>
+  <li>Create GitHub Page: Click on Settings and then Pages (on the left menu).
+    <ul>
+      <li>Under <strong>Build and deployment</strong>, choose GitHub Actions as Source.</li>
+    </ul>
+  </li>
+  <li>On your working host, create a folder for a local repository and clone the contents from the remote repo.</li>
+</ul>
+
+<h3 id="install-jekyll-and-its-dependencies">Install Jekyll and its dependencies</h3>
+<p>Jekyll is a <strong>Gem Package</strong>, that’s why we need to install Gem (package manager) and then Jekyll (similar to <code class="language-plaintext highlighter-rouge">pip</code>/<code class="language-plaintext highlighter-rouge">conda</code> on Python).
+Following the instructions on <a href="https://jekyllrb.com/docs/installation/other-linux/">Jekyll’s Official Documentation</a>, it is recommendable to use an installation directory for the working user (root is not recommended).</p>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">sudo apt install ruby-full build-essential zlib1g-dev software-properties-common
+</span><span class="gp">echo '#</span><span class="w"> </span>Install Ruby Gems to ~/gems<span class="s1">' &gt;&gt; ~/.bashrc
+</span><span class="gp">echo 'export GEM_HOME="$</span><span class="s1">HOME/gems"'</span> <span class="o">&gt;&gt;</span> ~/.bashrc
+<span class="gp">echo 'export PATH="$</span>HOME/gems/bin:<span class="nv">$PATH</span><span class="s2">"' &gt;&gt; ~/.bashrc
+</span><span class="go">source ~/.bashrc
+</span></code></pre></div></div>
+
+<p>Afterwards you should <code class="language-plaintext highlighter-rouge">exit</code> the session and login again so that the changes to the .bashrc take place. Run then <code class="language-plaintext highlighter-rouge">gem install jekyll bundler</code></p>
+
+<h4 id="troubleshooting">Troubleshooting</h4>
+<p>I had some trouble at this point, since my system wasn’t able to install all dependencies and Jekyll couldn’t be installed that way. It turns out you can also install Jekyll via Package Manager: <code class="language-plaintext highlighter-rouge">sudo apt install jekyll</code>.</p>
+
+<h3 id="initialize-jekyll-site">Initialize Jekyll site</h3>
+<ul>
+  <li>On your local repo, run:
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">jekyll new . #</span><span class="o">(</span>this creates a new Jekyll site on current directory<span class="o">)</span>
+<span class="gp">jekyll new . --force #</span><span class="o">(</span><span class="k">if </span>the directory is not empty, Jekyll will throw an error - use <span class="k">then </span>the <span class="nt">--force</span> option<span class="o">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li>Jekyll will start generating files. To be able to browse your site, you have to serve it using <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code>. You can find this command under <code class="language-plaintext highlighter-rouge">Gemfiles</code> textfile.</li>
+  <li>Your command prompt will generate an URL for preview - <code class="language-plaintext highlighter-rouge">http://127.0.0.1:4000/</code>. If you’re working via SSH as I was, you can use a local tunnel to preview your content. Once the tunnel is established, open <code class="language-plaintext highlighter-rouge">http://localhost:4000/</code> on your local browser.
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">ssh -p &lt;Port-No.&gt;</span><span class="w"> </span><span class="nt">-L</span> 4000:localhost:4000 user@&lt;ip-of-jekyll-host&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>If you want to see your changes live (without having to reload the page every time), restart the bundle with <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve --livereload</code> - <strong>Note</strong>: This doesn’t work if you set up a SSH tunnel. I guess it will work if you set up 2 tunnels, as Jekyll uses an extra port to serve live content.</li>
+</ul>
+
+<h3 id="set-up-github-pages-config">Set up GitHub Pages config</h3>
+<ul>
+  <li>Stop bundle (Ctrl + C), open <code class="language-plaintext highlighter-rouge">Gemfiles</code> file</li>
+  <li>Comment <code class="language-plaintext highlighter-rouge">gem "jekyll"</code>, uncomment <code class="language-plaintext highlighter-rouge">gem "github-pages"</code></li>
+  <li>Update gem github-pages: <code class="language-plaintext highlighter-rouge">bundle update github-pages</code></li>
+  <li>If needed, install bundle updates: <code class="language-plaintext highlighter-rouge">bundle install</code> then <code class="language-plaintext highlighter-rouge">bundle update</code></li>
+</ul>
+
+<h4 id="troubleshooting-1">Troubleshooting</h4>
+<p>This is again a point where I stuck for a while, as my system wasn’t once again able to fullfill dependencies.
+I looked at the errors carefully and tried to manually install all gems that were missing.
+Some error messages persisted though, but I was able to tweak my Jekyll config to work with GitHub Actions.</p>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">gem install github-pages
+bundle install
+bundle update
+</span><span class="gp">#</span><span class="w"> </span>Install will fail listing which gems were missing - I tried to <span class="nb">install </span>them manually:
+<span class="go">gem install eventmachine
+gem install http_parser.rb
+gem update
+apt install ruby-http
+gem update
+bundle update
+bundle install
+</span></code></pre></div></div>
+
+<h3 id="commit-changes-and-push-to-remote-repo">Commit changes and push to remote repo</h3>
+<p>Once you have commited and push changes, GitHub will need some time to render your site live.
+At this point, you will be able to see your blog at your GitHub Pages URL (<code class="language-plaintext highlighter-rouge">username.github.io/repo-name</code>).</p>
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">git add ./* #</span><span class="o">(</span>adds all files on current directory, so make sure you<span class="s1">'re on the local repo)
+</span><span class="go">git commit -m "Initialize Jekyll site"
+git push
+</span></code></pre></div></div>
+
+<h3 id="adjust-jekyll-configuration">Adjust Jekyll configuration</h3>
+<ul>
+  <li>Open <code class="language-plaintext highlighter-rouge">_config.yml</code> and adjust the following, then commit and push to remote repo:
+    <div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="go">base_url: "/repo-name"
+url: "https://username.github.io"
+</span></code></pre></div>    </div>
+  </li>
+  <li>Refresh URL on your browser to see changes - using incognito mode is recommended as <strong>old site might be saved in cache!</strong></li>
+</ul>
+
+<h3 id="create--publish-first-post">Create &amp; publish first post</h3>
+<ul>
+  <li>You will find an example post under <code class="language-plaintext highlighter-rouge">_posts/</code> on your local repository. You can use it as template to start writing your first posts. Remember to rename the file as recommended on the <em>Welcome to Jekyll</em> post - ``YYYY-MM-DD-your-post-name.markdown`</li>
+  <li>Every time you run <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve --livereload</code>, Jekyll will render the markdown language to display HTML.</li>
+</ul>
+
+<p><strong>IMPORTANT</strong>: As we tweaked Jekyll’s configuration to make it compatible with GitHub Pages, you might have problems when trying to preview the site on your local machine. If this happens, simply revert the steps from “Set up GitHub Pages config” and make sure to add the <code class="language-plaintext highlighter-rouge">Gemfiles</code> file to .gitignore.</p>
+
+<h2 id="adding-a-theme">Adding a Theme</h2>
+
+<p>With everything set up and running, only a nice theme was missing - I particularly liked the Chirpy Theme a lot for its compact design and cleanliness.
+To install it, I followed the instructions from Cotes Chung’s Site, <a href="https://chirpy.cotes.page/posts/getting-started/">Getting Started with Chirpy Theme</a>.
+I went for the <strong>Chirpy Starter</strong> method - even though I already had set up a repository for my blog, I created a new one and imported the config, Gemfile and posts from the prior repo. 
+I preferred keeping things separated, since I might probably break a lot of things while learning :) this way I might reckon faster what went wrong and will be able to restore things faster.</p>
+
+<p>The result of Cotes Chung’s documentation is the blog you’re currently reading, so I didn’t break that many things in the end.</p>
+
+<h2 id="to-dos">To-Dos</h2>
+
+<p>At the time you’re reading this, all these features/changes need to be done yet:</p>
+
+<ul>
+  <li>Set up the <code class="language-plaintext highlighter-rouge">about</code> site.</li>
+  <li>Figure out how to upload content and use it on posts (images).</li>
+  <li>I also have no clue how the tags actually work.</li>
+</ul>
+
+  </div><a class="u-url" href="/blog-jekyll/post/2023/12/21/setting-up-a-jekyll-blog.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog-jekyll/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Malili&#39;s Jekyll Blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Malili&#39;s Jekyll Blog</li><li><a class="u-email" href="mailto:your-email@example.com">your-email@example.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/d14znet"><svg class="svg-icon"><use xlink:href="/blog-jekyll/assets/minima-social-icons.svg#github"></use></svg> <span class="username">d14znet</span></a></li><li><a href="https://www.twitter.com/_emekadir_"><svg class="svg-icon"><use xlink:href="/blog-jekyll/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">_emekadir_</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>This is a test to see if I can set up a blog using the Jekyll framework. I want to use to gather my technical documentation about networking/infra theory and personal projects.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
